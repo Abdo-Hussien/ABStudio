@@ -69,3 +69,49 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 # PenGrove
+
+my-react-app/
+│
+├── public/
+│   ├── index.html
+│   ├── manifest.json
+│   └── favicon.ico
+│
+├── src/
+│   ├── assets/
+│   │   ├── images/
+│   │   │   └── logo.png
+│   │   └── styles/
+│   │       ├── App.css
+│   │       └── index.css
+│   │
+│   ├── components/
+│   │   ├── Header.js
+│   │   ├── Footer.js
+│   │   └── Button.js
+│   │
+│   ├── pages/
+│   │   ├── Home.js
+│   │   ├── About.js
+│   │   └── Contact.js
+│   │
+│   ├── hooks/
+│   │   └── useCustomHook.js
+│   │
+│   ├── context/
+│   │   └── AppContext.js
+│   │
+│   ├── utils/
+│   │   └── helpers.js
+│   │
+│   ├── App.js
+│   ├── App.test.js
+│   ├── index.js
+│   ├── reportWebVitals.js
+│   ├── setupTests.js
+│   └── serviceWorker.js
+│
+├── .gitignore
+├── package.json
+├── README.md
+└── yarn.lock or package-lock.json
