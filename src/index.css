@@ -1,10 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  background-color: #4a189a;
+  padding: 2rem 4rem;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.675px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  font-weight: bold;
+  background-color: #ffb464;
+  color: rgb(115, 68, 11);
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.111);
+  border: 1px solid;
+  cursor: pointer;
+  border-radius: 999px;
+  padding: 0.6rem 1.2rem;
+}
+button,
+p,
+strong,
+pre {
+  font-family: "Montserrat Alternates", sans-serif;
 }
 
 code {
