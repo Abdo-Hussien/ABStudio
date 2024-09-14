@@ -1,0 +1,26 @@
+@import '/src/App.scss';
+
+.blogs {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    // border: 1px solid;
+}
+
+.blog {
+    @extend .hover;
+    border-radius: 20px;
+    padding: 10px 10px;
+    background-color: #411589;
+    text-align: center;
+    cursor: pointer;
+    transition: scale 0.3s ease;
+}
+
+.blog-image {
+    border-radius: 10px;
+    max-width: 20rem;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
