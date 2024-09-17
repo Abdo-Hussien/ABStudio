@@ -24,12 +24,11 @@ function About() {
             console.log(`Error fetching result: ${err}`)
         }
     }
-
-    // useEffect to run the fetchData function when the component mounts
+    
     useEffect(() => {
         handleCall();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []); // Empty dependency array means it runs once after the component mounts
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []); 
 
 
     return (

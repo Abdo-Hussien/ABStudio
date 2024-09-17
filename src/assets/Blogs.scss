@@ -2,7 +2,7 @@
 
 .blogs {
     display: flex;
-    gap: 10px;
+    gap: 20px;
     flex-wrap: wrap;
     justify-content: space-around;
     // border: 1px solid;
@@ -12,7 +12,7 @@
     @extend .hover;
     border-radius: 20px;
     padding: 10px 10px;
-    background-color: rgba(154, 124, 83, 0.414);
+    background-color: rgba(var(--primary-color-1), 0.314);
     text-align: center;
     cursor: pointer;
     transition: scale 0.3s ease;
