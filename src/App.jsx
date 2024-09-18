@@ -1,17 +1,19 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable jsx-a11y/alt-text */
-
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home'
 import About from './pages/About'
+import DefaultLayout from './layouts/default'
+
+// import { useEffect } from 'react';
 
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/home" element={<Home />} />
-        <Route  path="/about" element={<About />} />
+        <Route path="/" element={<DefaultLayout />}>
+          <Route index element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Route>
       </Routes>
     </Router>
   )

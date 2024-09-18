@@ -24,38 +24,37 @@ function About() {
             console.log(`Error fetching result: ${err}`)
         }
     }
-    
+
     useEffect(() => {
         handleCall();
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []); 
+    }, []);
 
 
     return (
         <div className="App">
-            <div className="container">
-                <div>
-                    <button>Load Marvel Characters</button>
-                    <span className="text-3xl text-fuchsia-50">
-                        {stories?.dates?.map((date, index) => {
-                            return (
-                                <>
-                                    <p key={date.index}>
-                                        {date.type} <span>{date.date}</span>
-                                    </p>
-                                </>
-                            )
-                        })}
-                    </span>
-                </div>
-
+            <div className="cards flex gap-10 flex-wrap justify-center">
+                {stories?.stories?.items?.map((story, index) => {
+                    const image = stories?.images?.[index];
+                    return (
+                        <div className="card flex flex-col p-3 bg-rose-950 bg-opacity-25 rounded-lg w-52 gap-4" key={index}>
+                            {image && (
+                                <img className="w-52 rounded-lg"
+                                src={`${image.path}.${image.extension}`}
+                                alt={story.name}
+                                />
+                            )}
+                            <p className="text-rose-100">{story.name}</p>
+                        </div>
+                    );
+                })}
             </div>
-            <div className="subcontainer">
+            {/* <div className="subcontainer">
                 <span>me</span>
                 <h1 className="antialiased bg-gradient-to-r from-cyan-500 to-amber-400 border-2 rounded-lg border-lime-400 text-9xl p-4 font-bold">
                     dfgdf
                 </h1>
-            </div>
+            </div> */}
         </div>
     )
 }

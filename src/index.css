@@ -11,9 +11,9 @@ body {
   background: linear-gradient(270deg, rgb(20, 4, 4) 0%, rgb(var(--primary-color-3)) 100%);
   font-family: "Bebas Neue", sans-serif;
   letter-spacing: 0.675px;
-  padding: 0rem 25px 25px 25px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #eeeeee;
 }
 
 .border {
@@ -22,10 +22,10 @@ body {
 
 button {
   font-weight: bold;
-  background-color: rgba(var(--secondary-color-2), 1);
-  color: rgba(var(--subtitle-color), 1);
+  background-color: rgba(var(--primary-color-1), 1);
+  color: rgba(var(--title-color), 1);
   box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.111);
-  border: 1px solid rgba(var(--secondary-color-1), 1);
+  border: 1px solid rgba(var(--primary-color-1), 1);
   cursor: pointer;
   border-radius: 999px;
   padding: 0.5rem 1.1rem;
@@ -49,14 +49,14 @@ code {
 }
 
 :root {
-  --primary-color-1: 80, 12, 30;
-  --primary-color-2: 58, 9, 22;
-  --primary-color-3: 35, 5, 13;
+  --primary-color-1: 120, 20, 30;
+  --primary-color-2: 95, 15, 25;
+  --primary-color-3: 60, 10, 15;
 
   --secondary-color-1: 177, 223, 61;
   --secondary-color-2: 105, 136, 27;
   --secondary-color-3: 45, 59, 9;
 
   --title-color: 255, 227, 213;
-  --subtitle-color: rgb(186, 186, 186);
+  --subtitle-color: 186, 186, 186;
 }
