@@ -1,0 +1,28 @@
+.image-icon {
+    height: 80px;
+    filter: hue-rotate(90deg);
+}
+
+.exp-subtitle {
+    color: rgba(var(--subtitle-color));
+}
+
+.experience-container {
+    &:hover {
+        transform: translateY(-5px);
+
+    }
+    @extend .gradient-bg-2;
+    display: flex;
+    gap: 20px;
+    max-width: 500px;
+    transition: all 1s ease;
+}
+
+.gradient-bg {
+    background: radial-gradient(circle, rgba(255, 29, 29, 0.315) 0%, rgba(245, 245, 245, 0) 40%);
+}
+
+.gradient-bg-2 {
+    background: linear-gradient(to left, rgba(255, 67, 29, 0.115) 0%, rgba(245, 245, 245, 0) 40%);
+}

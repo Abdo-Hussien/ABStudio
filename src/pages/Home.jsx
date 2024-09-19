@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import '../App.scss'
 import ProfilePicture from '../components/ProfilePicture'
+import Experiences from '../components/Experiences/Experiences'
 import Blogs from '../components/Blogs'
 import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
@@ -71,14 +72,15 @@ export default function Home() {
             <div className="max-w-2xl">
                 <p className="font-bold text-2xl relative after:content-['|'] after:ml-1 after:animate-blink-cursor">{typeWriter}</p>
                 <p className="text-xl inline-flex">Currently, I'm a Software Engineer at&nbsp;<img src="/ITExperts.png" alt="IT" className="picture h-7" />&nbsp;ITExperts </p>
-                <p className="text-sm">As a dedicated professional with a strong background in e-commerce and CRM systems, I have successfully contributed to the development of a dynamic website that integrates book sales with local trip bookings. My work on this innovative platform involved designing and implementing features that enhance user experience and streamline operations. Passionate about leveraging technology to solve real-world problems, I am committed to driving business growth and delivering exceptional value through strategic solutions.</p>
+                <p className="text-sm mt-5">As a dedicated professional with a strong background in e-commerce and CRM systems, I have successfully contributed to the development of a dynamic website that integrates book sales with local trip bookings. My work on this innovative platform involved designing and implementing features that enhance user experience and streamline operations. Passionate about leveraging technology to solve real-world problems, I am committed to driving business growth and delivering exceptional value through strategic solutions.</p>
                 <Link to="/about">
                     <button className="my-3 !border-none bg-gradient-to-br from-red-600 to-red-700">
                         Explore more
                     </button>
                 </Link>
             </div>
-            <Blogs headers={headers} />
+            <Experiences />
+            {/* <Blogs headers={headers} /> */}
         </div>
     );
 }
