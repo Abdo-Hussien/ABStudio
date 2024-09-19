@@ -2,16 +2,43 @@
 import '../App.scss'
 import ProfilePicture from '../components/ProfilePicture'
 import Blogs from '../components/Blogs'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
 
 export default function Home() {
-    let [counter, setCounter] = useState(0)
-    const handleClick = () => {
-        setCounter(counter => counter + 1)
-        console.log(counter)
+    let [typeWriter, setTypeWriter] = useState('')
+    let index = 0
+    let textIndex = 0;
+    const text = [
+        "I'm a Software Engineer.",
+        "I specialize in building web applications.",
+        "I enjoy solving complex problems.",
+        "I love learning new programming languages.",
+        "I have experience with JavaScript and Python.",
+        "I love writing clean code.",
+        "I enjoy collaborating with others.",
+        "I strive to keep up with the latest tech trends.",
+        "I believe in continuous learning.",
+        "Building user-friendly interfaces is my goal."
+    ];
+    function type() {
+        if (index < text[textIndex].length) {
+            setTypeWriter(typeWriter += text[textIndex].charAt(index))
+            index++;
+            setTimeout(type, 100); // Adjust typing speed (100ms per letter)
+        }
+        else {
+
+            setTimeout(() => {
+                index = 0
+                setTypeWriter(typeWriter = "")
+                textIndex = (textIndex + 1) % text.length;
+                type()
+            }, 2000);
+        }
     }
+    useEffect(() => { type() }, [])
     const headers = [
         { title: 'Projects', image: '/projects.jpg', subtitle: 'Innovative ideas brought to life' },
         { title: 'Courses', image: '/courses.jpg', subtitle: 'Expanding knowledge and skills' },
@@ -40,14 +67,13 @@ export default function Home() {
                     </p>
                     <p className="text-xs">Crafting solutions with the elegance of logic</p>
                 </div>
-                {/* {counter !== 0 ? <span>{counter.toFixed(2)}</span> : null} */}
             </div>
             <div className="max-w-2xl">
-                <p className="font-bold text-3xl">I'm a Software Engineer.|</p>
+                <p className="font-bold text-2xl relative after:content-['|'] after:ml-1 after:animate-blink-cursor">{typeWriter}</p>
                 <p className="text-xl inline-flex">Currently, I'm a Software Engineer at&nbsp;<img src="/ITExperts.png" alt="IT" className="picture h-7" />&nbsp;ITExperts </p>
                 <p className="text-sm">As a dedicated professional with a strong background in e-commerce and CRM systems, I have successfully contributed to the development of a dynamic website that integrates book sales with local trip bookings. My work on this innovative platform involved designing and implementing features that enhance user experience and streamline operations. Passionate about leveraging technology to solve real-world problems, I am committed to driving business growth and delivering exceptional value through strategic solutions.</p>
                 <Link to="/about">
-                    <button className="my-3 !border-none bg-gradient-to-br from-red-600 to-red-700" onClick={handleClick}>
+                    <button className="my-3 !border-none bg-gradient-to-br from-red-600 to-red-700">
                         Explore more
                     </button>
                 </Link>
