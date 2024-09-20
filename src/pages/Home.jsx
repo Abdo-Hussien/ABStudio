@@ -2,6 +2,8 @@
 import '../App.scss'
 import ProfilePicture from '../components/ProfilePicture'
 import Experiences from '../components/Experiences/Experiences'
+import Skills from '../components/Skills/Skills'
+import Project from '../components/Projects/Project'
 import Blogs from '../components/Blogs'
 import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
@@ -41,10 +43,31 @@ export default function Home() {
     }
     useEffect(() => { type() }, [])
     const headers = [
+        { title: 'Experiences', image: '/courses.jpg', subtitle: 'Build brighter future through work experiences' },
+        { title: 'Skills', image: '/education.jpg', subtitle: 'Expanding knowledge and skills' },
         { title: 'Projects', image: '/projects.jpg', subtitle: 'Innovative ideas brought to life' },
-        { title: 'Courses', image: '/courses.jpg', subtitle: 'Expanding knowledge and skills' },
-        { title: 'Education', image: '/education.jpg', subtitle: 'Building a brighter future through learning' }
     ]
+    const projects = [
+        {
+            imagePath: "/Cart.PNG",
+            header: "Featured Project",
+            title: "Example Project",
+            description: `A web app for visualizing personalized Spotify data. View your
+                top artists, top tracks, recently played tracks, and detailed audio
+                information about each track. Create and save new playlists of
+                recommended tracks based on your existing playlists and more.`,
+        },
+        {
+            imagePath: "/courses.jpg",
+            reverse: true,
+            header: "Featured Project",
+            title: "Example Project",
+            description: `A web app for visualizing personalized Spotify data. View your
+                top artists, top tracks, recently played tracks, and detailed audio
+                information about each track. Create and save new playlists of
+                recommended tracks based on your existing playlists and more.`,
+        },
+    ];
     const currentRoute = useLocation()
     console.log(currentRoute.pathname)
 
@@ -79,8 +102,15 @@ export default function Home() {
                     </button>
                 </Link>
             </div>
+            <Blogs headers={headers} />
+
             <Experiences />
-            {/* <Blogs headers={headers} /> */}
+            <Skills />
+            <div className="flex flex-col gap-24">
+                {projects.map((project, index) => {
+                    return <Project key={index} {...project} />
+                })}
+            </div>
         </div>
     );
 }

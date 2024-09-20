@@ -36,7 +36,7 @@ export default function Experiences() {
         }
     ]
     return (
-        <div className="max-w-[1200px] m-4 p-0 mt-10 gap-5 flex flex-col gradient-bg">
+        <div id="Experiences" className="max-w-[1200px] m-4 p-0 mt-10 gap-5 flex flex-col gradient-bg">
             <p className="m-2 ml-24 text-3xl font-bold">Work Experience</p>
             <div className="flex flex-wrap gap-4 justify-center">
                 <Experience {...experienceProps[0]} />

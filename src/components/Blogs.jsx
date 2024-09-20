@@ -7,11 +7,11 @@ export default function Blogs({ headers }) {
             {headers.map((header, index) => {
 
                 return (
-                    <div key={index} className="blog">
-                        < img className="blog-image" src={header.image} alt={index} />
-                        <span>{header.title}</span>
+                    <a key={index} href={`#${header.title}`} className="blog">
+                        <img className="blog-image" src={header.image} alt={index} />
+                        <p className="text-xl font-bold">{header.title}</p>
                         <p className="text-gray-500">{header.subtitle}</p>
-                    </div>
+                    </a>
                 )
             }
             )}
