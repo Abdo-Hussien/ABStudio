@@ -100,10 +100,10 @@ export default function Home() {
                                 initial={{ background: 'radial-gradient(circle, #ff7eb322, transparent)' }}
                                 animate={{
                                     background: [
-                                        'radial-gradient(circle, #ff7eb333, transparent 70%)',  // Gradient 1
-                                        'radial-gradient(circle, #85ffbd33, transparent 70%)',  // Gradient 2
-                                        'radial-gradient(circle, #f6d36533, transparent 70%)',  // Gradient 3
-                                        'radial-gradient(circle, #ff9a9e33, transparent 70%)',  // Gradient 4
+                                        'radial-gradient(circle, #ff7eb333, transparent 70%)',
+                                        'radial-gradient(circle, #85ffbd33, transparent 70%)',
+                                        'radial-gradient(circle, #f6d36533, transparent 70%)',
+                                        'radial-gradient(circle, #ff9a9e33, transparent 70%)',
                                     ],
                                 }}
                                 transition={{
