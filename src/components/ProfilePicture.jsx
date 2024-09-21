@@ -6,9 +6,7 @@ export default function ProfilePicture() {
         <>
             <div className="profile-picture rounded-full flex justify-center">
                 <img src="/Arrow.png" alt="arrow" className="arrow opacity-0 md:opacity-100" />
-                <div className="picture">
-                    <img src="/Profile picture.png" alt="logo" />
-                </div>
+                <img src="/Profile_picture.png" className="picture" alt="logo" />
             </div>
         </>
     )
