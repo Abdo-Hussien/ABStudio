@@ -97,7 +97,7 @@ export default function Home() {
                             <img src="/Ellipse 5.png" alt="Ellipse" className="absolute top-0 -right-1 scale-150" />
                             <motion.span
                                 style={{paddingBottom: 20, paddingTop: 20}}
-                                initial={{ background: 'radial-gradient(circle, #ff7eb322, transparent)' }}
+                                initial={{ background: 'radial-gradient(circle, #ff7eb322, transparent, 70%)' }}
                                 animate={{
                                     background: [
                                         'radial-gradient(circle, #ff7eb333, transparent 70%)',

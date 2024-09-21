@@ -14,7 +14,7 @@ export default function Skills() {
                     duration: 1.9,
                     delay: 0.2
                 }}
-                >
+            >
                 <p className="text-xl text-center py-12">
                     I'm currently looking to join a&nbsp;
                     <span className="text-amber-400">cross-functional</span>
@@ -23,7 +23,15 @@ export default function Skills() {
                 </p>
 
             </motion.Element>
-            <div id="Skills" className="flex justify-center mb-2 content-start gap-5 flex-wrap-reverse max-w-[350px]">
+            <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                    type: 'tween',
+                    duration: 1.9,
+                    delay: 0.2
+                }}
+                id="Skills" className="flex z-20 justify-center mb-2 content-start gap-5 flex-wrap-reverse max-w-[350px]">
                 {
                     Array.from({ length: 12 }, (_, index) => (
                         <div key={index} className="rounded-full skill">
@@ -31,7 +39,7 @@ export default function Skills() {
                         </div>
                     ))
                 }
-            </div>
+            </motion.div>
             <motion.div
                 initial={{ opacity: 0, y: -50 }}
                 whileInView={{ opacity: 1, y: 0 }}
