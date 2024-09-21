@@ -9,14 +9,14 @@
 
 .experience-container {
     &:hover {
-        transform: translateY(-5px);
+        transform: translateY(-5px) !important;
 
     }
     @extend .gradient-bg-2;
     display: flex;
     gap: 20px;
     max-width: 500px;
-    transition: all 1s ease;
+    transition: transform 1s ease-out;
 }
 
 .gradient-bg {

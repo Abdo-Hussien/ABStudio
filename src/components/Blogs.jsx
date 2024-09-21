@@ -3,7 +3,7 @@ import '../assets/Blogs.scss'
 
 export default function Blogs({ headers }) {
     return (
-        <div className="blogs">
+        <div className="blogs p-4">
             {headers.map((header, index) => {
 
                 return (
